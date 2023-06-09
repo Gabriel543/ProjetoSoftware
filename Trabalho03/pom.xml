@@ -15,13 +15,11 @@
   </properties>
 
   <dependencies>
-<!--
     <dependency>
       <groupId>corejava</groupId>
       <artifactId>console</artifactId>
       <version>1.0</version>
     </dependency>
--->
     <dependency>
   	  <groupId>org.hibernate</groupId>
   	  <artifactId>hibernate-entitymanager</artifactId>
@@ -45,13 +43,13 @@
 	  <artifactId>mysql-connector-java</artifactId>
 	  <version>8.0.11</version>
 	</dependency>
-<!-- 
+<!--
     <dependency>
   	  <groupId>com.oracle</groupId>
   	  <artifactId>ojdbc14</artifactId>
   	  <version>1.0</version>
     </dependency>
- -->	
+ -->
   </dependencies>
 
 </project>
