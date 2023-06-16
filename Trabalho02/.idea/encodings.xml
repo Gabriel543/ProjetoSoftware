@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/java" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/src/main/java/exercicio/Ingrediente.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/exercicio/IngredienteDAOImpl.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/main/java/exercicio/Principal.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/main/java/exercicio/Util.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="ISO-8859-1" />

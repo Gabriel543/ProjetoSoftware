@@ -21,12 +21,16 @@ public class Ingrediente {
     private Long id;
     private String nome;
 
+    private String descricao;
+
     private int versao;
 
     public Ingrediente(){}
 
-    public Ingrediente(String nome) {
+    public Ingrediente(String nome, String descricao) {
+
         this.nome = nome;
+        this.descricao = descricao;
     }
 
     @Id // Chave primaria
@@ -53,6 +57,16 @@ public class Ingrediente {
     @Column(name = "versao")
     public int getVersao() {
         return versao;
+    }
+
+    @Version
+    @Column(name= "descricao")
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public void setVersao(int versao) {

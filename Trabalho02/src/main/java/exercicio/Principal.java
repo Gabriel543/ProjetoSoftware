@@ -9,6 +9,7 @@ public class Principal
 {	public static void main (String[] args) 
 	{	
 		String nome;
+		String descricao;
 		double lanceMinimo;
 		String dataCadastro;
 		Ingrediente umIngrediente;
@@ -32,8 +33,10 @@ public class Principal
 				{
 					nome = Console.readLine('\n' + 
 						"Informe o nome do ingrediente: ");
+					descricao = Console.readLine('\n' +
+							"Informe o descrição do ingrediente: ");
 						
-					umIngrediente = new Ingrediente(nome);
+					umIngrediente = new Ingrediente(nome,descricao);
 					
 					long numero = ingredienteDAO.inclui(umIngrediente);
 					
@@ -63,7 +66,7 @@ public class Principal
 												
 					System.out.println('\n' + "O que você deseja alterar?");
 					System.out.println('\n' + "1. Nome");
-					//System.out.println("2. Lance Mínimo");
+					System.out.println('\n' + "2. Descrição");
 
 					int opcaoAlteracao = Console.readInt('\n' + 
 											"Digite um número de 1 a 2:");
@@ -93,20 +96,19 @@ public class Principal
 								
 							break;
 					
-						/*case 2:
-							double novoLanceMinimo = Console.
-									readDouble("Digite o novo lance mínimo: ");
+						case 2:
+							String novaDescricao = Console.
+									readLine("Digite uma nova Descricao: ");
 							
-							umProduto.setLanceMinimo(novoLanceMinimo);
+							umIngrediente.setDescricao(novaDescricao);
 
 							try
-							{	produtoDAO.altera(umProduto);
+							{
+								ingredienteDAO.altera(umIngrediente);
 
 								System.out.println('\n' + 
-									"Alteração de lance mínimo efetuada " +
-									"com sucesso!");						
-							}
-							catch(ProdutoNaoEncontradoException e)
+									"Alteração da descrição alterada com Sucesso!");
+							}catch (IngredienteNaoEncontradoException e)
 							{	System.out.println('\n' + e.getMessage());
 							}
 							catch(EstadoDeObjetoObsoletoException e)
@@ -116,7 +118,7 @@ public class Principal
 							    	"por outro usuário.");
 							}
 								
-							break; */
+							break;
 
 						default:
 							System.out.println('\n' + "Opção inválida!");
@@ -140,6 +142,7 @@ public class Principal
 					System.out.println('\n' + 
 						"Número = " + umIngrediente.getId() +
 						"    Nome = " + umIngrediente.getNome() +
+						"	Descricao = " + umIngrediente.getDescricao() +
 					    "    Versão = " + umIngrediente.getVersao());
 														
 					String resp = Console.readLine('\n' + 
@@ -172,7 +175,7 @@ public class Principal
 						System.out.println('\n' + 
 							"Id = " + ingrediente.getId() +
 							"  Nome = " + ingrediente.getNome() +
-							//"  Lance mínimo = " + produto.getLanceMinimo() +
+							"  Descricao = " + ingrediente.getDescricao() +
 							//"  Data Cadastro = " + produto.getDataCadastroMasc() +
 							"  Versão = " + ingrediente.getVersao());
 					}
