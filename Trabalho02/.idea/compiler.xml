@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Exercicio04-Produto-Spring-AppService-DAO-Com-Anotacoes" />
+        <module name="Trabalho02" />
       </profile>
     </annotationProcessing>
   </component>

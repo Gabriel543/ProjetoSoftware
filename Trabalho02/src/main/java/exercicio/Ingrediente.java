@@ -14,6 +14,8 @@ import javax.persistence.Version;
 import javax.persistence.*;
 
 @Entity // É uma entidade relacional( é uma tabela)
+@DynamicInsert
+@DynamicUpdate
 @Table(name="ingrediente")
 public class Ingrediente {
     private Long id;
